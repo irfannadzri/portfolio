@@ -890,7 +890,14 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
 
 /* Contact */
 .contact-inner { text-align: center; }
-.contact-text { color: var(--text-muted); max-width: 500px; margin: 0 auto 40px; }
+.contact-text { color: var(--text-muted); max-width: 520px; margin: 0 auto 28px; }
+.contact-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+}
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
