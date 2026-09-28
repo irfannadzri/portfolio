@@ -41,23 +41,6 @@ html { scroll-behavior: smooth; }
   z-index: 300;
 }
 
-/* Cursor Light Glow Follower (Matching Navbar Pill Blue Glow) */
-.cursor-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.28) 0%, rgba(37, 99, 235, 0.12) 45%, transparent 70%);
-  filter: blur(20px);
-  pointer-events: none;
-  z-index: 99;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  will-change: transform;
-}
-
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -394,7 +377,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   right: 10%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.6) 50%, transparent 100%);
-  filter: blur(1.5px);
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.7), 0 0 25px rgba(59, 130, 246, 0.4);
   pointer-events: none;
 }
@@ -407,7 +389,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   right: 10%;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.6) 50%, transparent 100%);
-  filter: blur(1.5px);
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.7), 0 0 25px rgba(59, 130, 246, 0.4);
   pointer-events: none;
 }
@@ -525,7 +506,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  backdrop-filter: blur(10px);
 }
 .skill-card h3 { display: flex; align-items: center; gap: 10px; font-size: 1rem; margin-bottom: 14px; color: #f8fafc; }
 .skill-card h3 .icon { color: #60a5fa; }
@@ -584,7 +564,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s, box-shadow 0.25s;
-  backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
 }
@@ -872,7 +851,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px;
-  backdrop-filter: blur(10px);
 }
 .edu-card h3 { font-size: 1rem; margin-bottom: 8px; color: #f8fafc; }
 .edu-org { color: #60a5fa; font-weight: 600; margin: 0 0 4px; font-size: 0.92rem; }
@@ -915,7 +893,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   padding: 20px;
   text-align: left;
   transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-  backdrop-filter: blur(10px);
 }
 .contact-item:hover { transform: translateY(-3px); border-color: #60a5fa; box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
 .contact-icon {
@@ -1015,7 +992,6 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
     transform: none;
     transition: none;
   }
-  .cursor-glow { display: none; }
   .status-dot { animation: none; }
   .project-card,
   .project-img,

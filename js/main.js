@@ -73,47 +73,6 @@ backToTop.addEventListener('click', () => {
 document.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// Interactive Cursor Light Glow Follower (Blue theme matching navbar pills)
-// Skipped entirely under prefers-reduced-motion — no point animating a hidden element.
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const cursorGlow = document.createElement('div');
-  cursorGlow.className = 'cursor-glow';
-  document.body.appendChild(cursorGlow);
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let glowX = mouseX;
-  let glowY = mouseY;
-
-  let glowRunning = false;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorGlow.style.opacity = '1';
-    if (!glowRunning) {
-      glowRunning = true;
-      requestAnimationFrame(animateCursorGlow);
-    }
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', () => {
-    cursorGlow.style.opacity = '0';
-  });
-
-  // Loop only while the glow is still catching up to the cursor
-  function animateCursorGlow() {
-    glowX += (mouseX - glowX) * 0.15;
-    glowY += (mouseY - glowY) * 0.15;
-    cursorGlow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%, -50%)`;
-    if (Math.abs(mouseX - glowX) < 0.5 && Math.abs(mouseY - glowY) < 0.5) {
-      glowRunning = false;
-      return;
-    }
-    requestAnimationFrame(animateCursorGlow);
-  }
-}
-
 // Project Card Multi-View Switcher (Dashboard vs Public/Login)
 document.querySelectorAll('.project-media-wrapper').forEach((wrapper) => {
   const buttons = wrapper.querySelectorAll('.view-tab-btn');
