@@ -85,23 +85,33 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   let glowX = mouseX;
   let glowY = mouseY;
 
+  let glowRunning = false;
+
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
     cursorGlow.style.opacity = '1';
+    if (!glowRunning) {
+      glowRunning = true;
+      requestAnimationFrame(animateCursorGlow);
+    }
   }, { passive: true });
 
   document.addEventListener('mouseleave', () => {
     cursorGlow.style.opacity = '0';
   });
 
+  // Loop only while the glow is still catching up to the cursor
   function animateCursorGlow() {
     glowX += (mouseX - glowX) * 0.15;
     glowY += (mouseY - glowY) * 0.15;
     cursorGlow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%, -50%)`;
+    if (Math.abs(mouseX - glowX) < 0.5 && Math.abs(mouseY - glowY) < 0.5) {
+      glowRunning = false;
+      return;
+    }
     requestAnimationFrame(animateCursorGlow);
   }
-  animateCursorGlow();
 }
 
 // Project Card Multi-View Switcher (Dashboard vs Public/Login)

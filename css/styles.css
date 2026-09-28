@@ -395,46 +395,6 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
   }
 }
 
-@media (max-width: 480px) {
-  .hero {
-    padding: 120px 0 48px;
-  }
-  .portrait-wrapper {
-    max-width: 240px;
-  }
-  .hero-portrait-img {
-    transform: scale(1);
-  }
-  .name-main {
-    font-size: clamp(2.1rem, 11vw, 3rem);
-    white-space: normal;
-  }
-  .name-overlay {
-    bottom: -8px;
-  }
-  .hero-position-title {
-    font-size: clamp(1.3rem, 6vw, 1.8rem);
-  }
-  .hero-desc-text {
-    font-size: 0.95rem;
-  }
-  .section {
-    padding: 48px 0;
-  }
-  .section-title {
-    margin-bottom: 24px;
-  }
-  .project-card-body {
-    padding: 18px;
-  }
-  .back-to-top {
-    right: 16px;
-    bottom: 16px;
-    width: 42px;
-    height: 42px;
-  }
-}
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -672,7 +632,7 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
 
 /* Hover Zoom Hint Icon */
 .project-media-wrapper::after {
-  content: '🔍 Click to expand';
+  content: 'Click to expand';
   position: absolute;
   top: 12px;
   left: 12px;
@@ -1151,4 +1111,45 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
   padding: 6px 18px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Small phones (kept last so it overrides base and 992px rules) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 120px 0 48px;
+  }
+  .portrait-wrapper {
+    max-width: 240px;
+  }
+  .hero-portrait-img {
+    transform: scale(1);
+  }
+  .name-main {
+    font-size: clamp(2.1rem, 11vw, 3rem);
+    white-space: normal;
+  }
+  .name-overlay {
+    bottom: -8px;
+  }
+  .hero-position-title {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+  }
+  .hero-desc-text {
+    font-size: 0.95rem;
+  }
+  .section {
+    padding: 48px 0;
+  }
+  .section-title {
+    margin-bottom: 24px;
+  }
+  .project-card-body {
+    padding: 18px;
+  }
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
 }
