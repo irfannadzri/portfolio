@@ -52,39 +52,38 @@
 <main>
 
   <section id="home" class="hero">
-    <div class="container hero-container">
-      <!-- Left Column: Position/Title -->
-      <div class="hero-left reveal">
-        <div class="role-accent-line"></div>
-        <h2 class="hero-position-title">Laravel Developer &amp; Full Stack Developer</h2>
-      </div>
-
-      <!-- Center Column: Portrait & Overlay Name -->
-      <div class="hero-center reveal">
-        <div class="portrait-wrapper">
-          <img src="assets/3d animation image.png" alt="Irfan Nadzri" class="hero-portrait-img" width="677" height="369" fetchpriority="high" decoding="async">
-          <div class="name-overlay">
-            <h1 class="name-main">Irfan Nadzri</h1>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column: Description & Actions -->
-      <div class="hero-right reveal">
-        <p class="hero-desc-text">
-          Hi, I'm Irfan Nadzri, a Laravel &amp; Full Stack Developer passionate about crafting scalable, high-performance web applications, robust APIs, and seamless digital experiences tailored to deliver real results.
+    <div class="container hero-grid">
+      <div class="hero-main">
+        <p class="hero-status reveal"><span class="status-dot"></span> Open to opportunities &middot; Selangor, MY</p>
+        <h1 class="hero-name reveal"><span>Irfan</span> <span class="hero-name-accent">Nadzri.</span></h1>
+        <h2 class="hero-role reveal">Laravel &amp; Full Stack Developer</h2>
+        <p class="hero-desc-text reveal">
+          I build scalable, high-performance web applications and robust APIs with Laravel, React and MySQL &mdash; from database design to deployment.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions reveal">
           <a href="#projects" class="btn btn-primary">View My Work <svg class="icon" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
           <a href="assets/Resume%20-%20Mohammad%20Nur%20Irfan%20bin%20Mohammad%20Nadzri%20Hisham.pdf" class="btn btn-outline" download="Irfan-Nadzri-Resume.pdf">Download CV <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></a>
           <a href="#contact" class="btn btn-outline">Contact Me</a>
         </div>
-        <div class="hero-meta">
-          <span><svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Selangor, MY</span>
+        <div class="hero-meta reveal">
           <a href="https://github.com/irfannadzri" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> GitHub</a>
           <a href="https://linkedin.com/in/irfannadzri" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn</a>
         </div>
       </div>
+
+      <aside class="hero-code reveal" aria-hidden="true">
+        <div class="code-bar"><span></span><span></span><span></span><em>Developer.php</em></div>
+<pre><code><span class="c-k">class</span> <span class="c-t">Developer</span> <span class="c-k">extends</span> <span class="c-t">Model</span>
+{
+    <span class="c-k">protected</span> <span class="c-v">$name</span>   = <span class="c-s">'Irfan Nadzri'</span>;
+    <span class="c-k">protected</span> <span class="c-v">$role</span>   = <span class="c-s">'Laravel Developer'</span>;
+    <span class="c-k">protected</span> <span class="c-v">$stack</span>  = [
+        <span class="c-s">'Laravel'</span>, <span class="c-s">'React'</span>,
+        <span class="c-s">'Inertia.js'</span>, <span class="c-s">'MySQL'</span>,
+    ];
+    <span class="c-k">protected</span> <span class="c-v">$status</span> = <span class="c-s">'Open to work'</span>;
+}</code></pre>
+      </aside>
     </div>
   </section>
 
