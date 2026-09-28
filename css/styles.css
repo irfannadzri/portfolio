@@ -474,6 +474,47 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
   }
 }
 
+/* Core stack cards */
+.core-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.core-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 28px 24px 24px;
+}
+.core-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+.core-desc { margin: 0 0 20px; color: #b4c0d2; font-size: 0.94rem; }
+.used-label {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.pill-row.muted .pill {
+  background: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #cbd5e1;
+}
+.pill-basic {
+  background: transparent;
+  border-style: dashed;
+  color: #b4c0d2;
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
