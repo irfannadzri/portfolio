@@ -424,7 +424,7 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
   margin-bottom: 36px;
   color: #f8fafc;
 }
-.about-text { max-width: 760px; color: var(--text-muted); font-size: 1.05rem; }
+.about-text { max-width: 760px; color: #b4c0d2; font-size: 1.05rem; margin: 0 0 16px; }
 
 .about-stats {
   display: flex;
