@@ -663,6 +663,28 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
   }
 }
 
+/* Card with no screenshot yet */
+.project-media-wrapper.no-media { cursor: default; }
+.project-media-wrapper.no-media::after { display: none; }
+.media-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #93c5fd;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 50% 40%, rgba(37, 99, 235, 0.22), transparent 70%);
+  background-size: 28px 28px, 28px 28px, auto;
+}
+.media-placeholder .icon { width: 34px; height: 34px; stroke-width: 1.5; }
+
 /* Glass View Switcher Tab (Dashboard vs Public/Login) */
 .project-view-switch {
   position: absolute;
