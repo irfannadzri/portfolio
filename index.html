@@ -390,29 +390,40 @@
 
         <!-- 6. ResellerOS -->
         <article class="project-card reveal">
-          <div class="project-media-wrapper no-media">
-            <div class="media-placeholder">
-              <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              <span>Preview coming soon</span>
-            </div>
+          <div class="project-media-wrapper" data-active-view="storefront">
+            <img src="assets/reselleros_storefront.jpg" alt="ResellerOS Branded Online Storefront" class="project-img view-storefront active" loading="lazy" decoding="async">
+            <img src="assets/reselleros_pos.jpg" alt="ResellerOS In-Store POS" class="project-img view-pos" loading="lazy" decoding="async">
+            <img src="assets/reselleros_membership.jpg" alt="ResellerOS Membership &amp; Rewards" class="project-img view-membership" loading="lazy" decoding="async">
+            <img src="assets/reselleros_tenant_dashboard.jpg" alt="ResellerOS Store Admin Dashboard" class="project-img view-tenant" loading="lazy" decoding="async">
+            <img src="assets/reselleros_superadmin_dashboard.jpg" alt="ResellerOS Platform Super Admin Dashboard" class="project-img view-superadmin" loading="lazy" decoding="async">
+            <img src="assets/reselleros_warehouse_dashboard.jpg" alt="ResellerOS Warehouse Dashboard" class="project-img view-warehouse" loading="lazy" decoding="async">
             <span class="project-status-badge badge-dev">In Development</span>
+            <div class="project-view-switch">
+              <button class="view-tab-btn active" data-view="storefront" type="button">Store</button>
+              <button class="view-tab-btn" data-view="pos" type="button">POS</button>
+              <button class="view-tab-btn" data-view="membership" type="button">Members</button>
+              <button class="view-tab-btn" data-view="tenant" type="button">Store Admin</button>
+              <button class="view-tab-btn" data-view="superadmin" type="button">Platform</button>
+              <button class="view-tab-btn" data-view="warehouse" type="button">Warehouse</button>
+            </div>
           </div>
           <div class="project-card-body">
             <div class="project-client">Multi-tenant SaaS Platform</div>
             <h3>ResellerOS &ndash; POS &amp; Commerce Platform</h3>
             <div class="pill-row small">
-              <span class="pill">Laravel</span><span class="pill">React</span><span class="pill">Inertia.js</span><span class="pill">MySQL</span><span class="pill">Multi-tenant</span><span class="pill">POS</span>
+              <span class="pill">Laravel</span><span class="pill">React</span><span class="pill">Inertia.js</span><span class="pill">TypeScript</span><span class="pill">Tailwind CSS</span><span class="pill">MySQL</span><span class="pill">Multi-tenant</span><span class="pill">POS</span><span class="pill">Payment gateway</span><span class="pill">Loyalty system</span>
             </div>
             <p class="project-desc">
-              A multi-tenant point-of-sale system that lets resellers run their physical store and online store from one platform, with stock and sales in a single view.
+              A multi-tenant commerce platform that lets resellers run their physical shop and online store from one system. Each store gets its own branded storefront, POS and dashboard, while a platform admin manages stores, warehouse restocking and commissions.
             </p>
             <ul class="project-highlights">
-              <li>Inventory module to track stock levels across products and tenants.</li>
-              <li>Sales dashboard for monitoring performance in real time.</li>
-              <li>POS interface for in-store sales, plus an e-commerce storefront for online orders.</li>
+              <li>In-store POS and online storefront share one live stock count, with delivery fees, SST, returns and refunds.</li>
+              <li>Membership programme where shoppers earn points and redeem them for vouchers at checkout or the POS.</li>
+              <li>Central warehouse restocking with commission statements, plus sales, profit and stock reports per store and platform-wide.</li>
+              <li>Role-based permissions, audit logs, rate limiting, CHIP payments and stock/points locking to prevent double-spending.</li>
             </ul>
             <div class="project-footer">
-              <span class="project-note"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Currently in development</span>
+              <span class="project-note"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> In development &middot; 1,000+ automated tests</span>
             </div>
           </div>
         </article>

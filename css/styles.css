@@ -680,7 +680,13 @@ h1, h2, .stat-value, .core-card h3 { font-family: var(--font-display); }
   border: 1px solid rgba(59, 130, 246, 0.3);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   z-index: 5;
+  max-width: calc(100% - 24px);
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.project-view-switch::-webkit-scrollbar { display: none; }
+
+.view-tab-btn { flex-shrink: 0; white-space: nowrap; }
 
 .view-tab-btn {
   background: transparent;
